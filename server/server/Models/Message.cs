@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace server.Models
 {
-    public class Test
+    public class Message
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string Msg { get; set; }
     }
 }
