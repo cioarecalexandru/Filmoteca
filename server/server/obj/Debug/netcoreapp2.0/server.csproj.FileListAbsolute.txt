@@ -1,0 +1,11 @@
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\bin\Debug\netcoreapp2.0\server.deps.json
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\bin\Debug\netcoreapp2.0\server.runtimeconfig.json
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\bin\Debug\netcoreapp2.0\server.runtimeconfig.dev.json
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\bin\Debug\netcoreapp2.0\server.dll
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\bin\Debug\netcoreapp2.0\server.pdb
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.csprojResolveAssemblyReference.cache
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.csproj.CoreCompileInputs.cache
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.AssemblyInfoInputs.cache
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.AssemblyInfo.cs
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.dll
+D:\Facultate\Anul 3\Sem 2\WAD\server\server\obj\Debug\netcoreapp2.0\server.pdb
