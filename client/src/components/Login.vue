@@ -43,6 +43,12 @@ export default {
         Email: this.Email,
         Password: this.Password
       });
+      if(response.data === "error"){
+        this.Error = "Date incorecte";
+      }
+      else{
+        this.Error = "";
+      }
     }
   }
 };
