@@ -1,13 +1,18 @@
-module.exports = {
-    port: 8081,
+module.exports={
+    port:process.env.PORT || 3000,
     db:{
-        database: process.env.DB_NAME || 'filmoteca',
-        user: process.env.DB_USER || 'filmoteca',
-        password: process.env.DB_PASS || 'filmoteca',
-        options: {
-            dialect: process.env.DIALECT || 'sqlite',
-            host: process.env.HOST || 'localhost',
-            storage: './filmoteca.sqlite'
-        }
+       database:process.env.DB_NAME || 'local_library' ,
+       user:process.env.DB_USER || 'root',
+       passwors:process.env.DB_PASS || 'root',
+       options:{
+           dialect:process.env.DIALECT ||'mongoose',
+           host:process.env.HOST || 'localhost',
+           storage:'mongodb://cioarec.alex:password@ds237610.mlab.com:37610/local_library'
+       }
+    },
+    authentification:{
+        jwtSecret:process.env.JWT_SECRET || 'secret'
     }
+       
+    
 }
