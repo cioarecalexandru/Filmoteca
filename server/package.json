@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "mssql": "^4.1.0",
+    "nodemon": "^1.17.4",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
+}
