@@ -2,10 +2,11 @@ import Api from '@/services/Api'
 
 export default {
   register(credentials) {
-    return Api().post('register/', credentials);
+    console.log('register from client with ', credentials);
+    return Api().post('user/addUser/', credentials);
   },
   login(credentials){
-    return Api().post('login/', credentials);
+    return Api().post('user/logIn/', credentials);
   }
 }
 

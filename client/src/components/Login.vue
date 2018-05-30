@@ -1,53 +1,53 @@
 <template>
   <v-layout row mt-5>
     <v-flex xs6 offset-xs3>
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="cyan" dark>
-          <v-toolbar-title>Logare</v-toolbar-title>
-        </v-toolbar>
-      
-        <div class="pl-4 pr-4 pt-2 pb-2">
-         <v-text-field label="Email" v-model="Email"></v-text-field>
+      <panou title="Logare">
+        <v-text-field label="Email" v-model="email"></v-text-field>
          <br>
-         <v-text-field label="Parola" v-model="Password"></v-text-field>
+         <v-text-field type="password" label="Parola" v-model="password"></v-text-field>
          <div class="error" v-html="Error">
          </div>
          <v-btn dark class="cyan" @click="login">Logare</v-btn>
-        </div>
-      </div>
+      </panou>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
 import AuthenticationService from "@/services/AuthenticationService";
+import Panou from '@/components/Panou'
 export default {
   data() {
     return {
-      Email: "abc",
-      Password: "123",
+      email: "abc",
+      password: "123",
       Error: null
     };
   },
+  components:{
+    Panou
+  },
   watch:{
-    Email: function(){
+    email: function(){
       this.Error = "";
     },
-    Password: function(){
+    password: function(){
       this.Error = "";
     }
   },
   methods: {
     async login() {
       const response = await AuthenticationService.login({
-        Email: this.Email,
-        Password: this.Password
+        email: this.email,
+        password: this.password
       });
-      if(response.data === "error"){
-        this.Error = "Date incorecte";
-      }
-      else{
-        this.Error = "";
+      console.log('raspunsul la login este ', response);
+      this.$store.dispatch('setToken', response.data.token);
+      this.$store.dispatch('setUser', response.data.user);
+      if(this.$store.state.isUserLoggedIn){
+        this.$router.push({
+          name:'filme'
+        })
       }
     }
   }

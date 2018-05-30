@@ -20,9 +20,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-require('./routes')(app);
 var userRouter = require('../server/routes/user');
 app.use('/user',userRouter);
+
+var filmRouter = require('../server/routes/filme');
+app.use('/filme',filmRouter);
 
 app.listen(config.port);
 console.log('server started on port ', config.port);
