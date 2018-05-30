@@ -10,7 +10,7 @@ var userToken;
 var loggedUser;
 
 router.post('/addUser',(req,res)=>{
-
+    console.log('Test 1');
     UserControllerIns.addUser(req.body, (err, result) => {
         if (err) {
           console.error(err);

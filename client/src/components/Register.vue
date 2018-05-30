@@ -1,31 +1,27 @@
 <template>
   <v-layout row mt-5>
     <v-flex xs6 offset-xs3>
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="cyan" dark>
-          <v-toolbar-title>Inregistrare</v-toolbar-title>
-        </v-toolbar>
-      
-        <div class="pl-4 pr-4 pt-2 pb-2">
-         <v-text-field label="Email" v-model="Email"></v-text-field>
+      <panou title="Inregistrare">
+        
+         <v-text-field label="Email" v-model="email"></v-text-field>
          <br>
-         <v-text-field label="Parola" v-model="Password"></v-text-field>
+         <v-text-field type="password" label="Parola" v-model="password"></v-text-field>
          <div class="error" v-html="Error">
          </div>
          <v-btn dark class="cyan" @click="register">Inregistrare</v-btn>
-        </div>
-      </div>
+      </panou>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
 import AuthenticationService from "@/services/AuthenticationService";
+import Panou from '@/components/Panou'
 export default {
   data() {
     return {
-      Email: "abc",
-      Password: "123",
+      email: "abc",
+      password: "123",
       Error: null
     };
   },
@@ -40,8 +36,8 @@ export default {
   methods: {
     async register() {
       const response = await AuthenticationService.register({
-        Email: this.Email,
-        Password: this.Password
+        email: this.email,
+        password: this.password
       });
       if (response.data === "error") {
         this.Error = "A fost o problema la inregistrare";
@@ -49,6 +45,9 @@ export default {
         this.Error = "";
       }
     }
+  },
+  components:{
+    Panou
   }
 };
 </script>
